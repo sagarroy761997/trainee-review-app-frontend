@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Login from './components/pages/Login';
+import dataContext from './context/dataContext';
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Landing from './components/pages/Landing';
+import Report from './components/Report';
 function App() {
+  const [apiData, setApiData] = useState({});
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <dataContext.Provider value={{apiData, setApiData, open, setOpen }}>
+      <BrowserRouter>
+    
+      <Routes>
+        <Route path="/" element={<Login/>}/>
+        <Route path = "/table" element={<Landing/>}/>
+        <Route path = "/form" element={<Report/>}/>
+      </Routes>
+      </BrowserRouter>
+    </dataContext.Provider>
   );
 }
 
