@@ -1,13 +1,18 @@
-import { makeStyles } from "@mui/styles";
+import { makeStyles } from '@mui/styles';
 
 export default makeStyles({
   root: {
-    display: "grid !important",
-    gridAutoRows: 'auto',
+    padding: '50px',
+    display: 'grid !important',
+    gridAutoRows: 'minmax(100px, auto)',
+
     gridAutoColumns: 'auto',
-    // gap: '4%',
+    gap: '20px',
     boxSizing: 'border-box',
-    // marginRight: 
+    // marginRight:
+
+    // gridRowGap: '50px',
+
   },
   imageDiv: {
     display: 'flex !important',
@@ -16,37 +21,39 @@ export default makeStyles({
   },
   image: {
     borderRadius: '10px',
-    border: '1px solid black',
+    border: '2px solid black',
     height: '243px',
     width: '207px',
     marginBottom: '4%',
-        
+
   },
   info: {
     gridColumn: '2/5',
+    border: '2px solid black',
+    borderRadius: '10px',
+    padding: '20px',
 
   },
-  name:{
-    width: '100%'
+  name: {
+    width: '100%',
   },
   date: {
     display: 'flex',
-    justifyContent: "space-between",
-    gap: '4%'
+    justifyContent: 'space-between',
+    gap: '4%',
   },
-  startDate:{
+  startDate: {
     width: '100%',
   },
   certificate: {
     gridRow: '2',
-    gridColumn : "1/5",
-
+    gridColumn: '1/5',
   },
 
   certificateStore: {
     display: 'flex',
     flexWrap: 'wrap',
-    border : "1px solid grey",
+    border: '2px solid black',
     borderRadius: '7px',
     // justifyContent: 'space-around',
     // display: 'grid',
@@ -55,9 +62,11 @@ export default makeStyles({
     // gridAutoFlow: 'column',
     gap: '1%',
     padding: '1% 1% 0 1% ',
+    minHeight: '70%',
   },
-  certificateHeading:{
+  certificateHeading: {
     margin: '1% !important',
+    fontWeight: 'bold !important',
   },
   certificateForm: {
     display: 'flex',
@@ -66,18 +75,16 @@ export default makeStyles({
     alignItems: 'center',
   },
 
-
-
   project: {
     gridRow: '3',
-    gridColumn : "1/5",
+    gridColumn: '1/5',
 
   },
-  
+
   projectStore: {
     display: 'flex',
     flexWrap: 'wrap',
-    border : "1px solid grey",
+    border: '2px solid black',
     borderRadius: '7px',
     // justifyContent: 'space-around',
     // display: 'grid',
@@ -86,14 +93,25 @@ export default makeStyles({
     // gridAutoFlow: 'column',
     gap: '1%',
     padding: '2% 1% 1% 1%',
+    // minWidth: "300px"
+    // minHeight: '50%',
   },
-  projectHeading:{
-    margin: '1%',
+  projectHeading: {
+    margin: '1% !important',
+    fontWeight: 'bold !important',
   },
   projectForm: {
     display: 'flex',
     justifyContent: 'start',
     gap: '1%',
     alignItems: 'center',
-  }
+  },
+  skillTable: {
+    gridRow: '4',
+    gridColumn: '2/4',
+  },
+  heading: {
+    fontWeight: 'bold !important',
+  },
+
 });

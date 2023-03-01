@@ -1,7 +1,12 @@
-import { makeStyles } from "@mui/styles"
+import { makeStyles } from '@mui/styles';
 
 export default makeStyles({
-    root: {
-        marginBottom: "1% !important",
-    }
-})
+  // root: {
+  //     border:"1px solid black",
+  //     borderRadious: "30px !important",
+  //     padding:"50px !important"
+  // },
+  link: {
+    color: 'black !important',
+  },
+});
